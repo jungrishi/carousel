@@ -5,34 +5,15 @@ var slideIntervalID, leftSliderID, rightSliderID, slideTimer;
 var ele = document.querySelector('.carousel-image-wrapper');
 var carouselChildren = ele.children;
 
-
 var firstNode = carouselChildren[0].cloneNode(true);
 
 ele.appendChild(firstNode);
-
-// console.log(firstNode);
-// console.log(lastNode);
-
-// ele.insertBefore(lastNode, carouselChildren[0]);
-console.log(ele);
-
 var wrapperWidth = width * carouselChildren.length;
 console.log(wrapperWidth);
 
 ele.style.width = wrapperWidth + 'px';
 var x =0;
 var substract = -1;
-
-
-//control slide
-// var prev_array  = [];
-// var next_array = [];
-// next_array.push(carouselChildren);
-// console.log(prev_array, next_array);
-// for (var i = 0; i<carouselChildren.length; i++){
-//   carouselChildren.style.left[i] = width * i;
-//   image_pos.push()
-// }
 next_button.onclick = slideNext;
 prev_button.onclick = slidePrev;
 function slideNext(){
@@ -75,8 +56,6 @@ function slide() {
             x=0;
             clearInterval(slideIntervalID);
             setTimeout(slide, 2000);
-            // clearTimeout(slideTimer);
-            // console.log('last node');
         }
         else if (Math.abs(x) % width === 0){
           clearInterval(slideIntervalID);
