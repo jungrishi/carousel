@@ -1,0 +1,20 @@
+.clearfix {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel-container {
+    height: auto;
+    margin: 0 auto;
+    background: red;
+    overflow: hidden;
+    }
+
+.carousel-image-wrapper {
+    height: auto;
+}    
+
+img {
+    float: left;
+}
